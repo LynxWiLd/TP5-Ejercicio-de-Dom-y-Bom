@@ -8,13 +8,42 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <title>EJERCICIO01</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="navbar bg-dark text-white p-3">
       <div class="container d-flex justify-content-between align-items-center">
         <h1>Ejercicio 01</h1>
         <a href="../index.html" class="btn btn-primary">Volver</a>
       </div>
     </header>
+    <main class="flex-grow-1 container my-4">
+      <div class="d-flex flex-column align-items-center gap-3">
+        <h1>Adivina el numero generado</h1>
+        <p>
+          El sistema generará un número aleatorio entre 1 y 100. Tu objetivo es
+          adivinar ese número en la menor cantidad de intentos posible.
+        </p>
+        <button type="button" class="btn btn-warning" id="startRandom">
+          Comenzar el juego
+        </button>
+        <form class="row g-3 align-items-center justify-content-center">
+          <div class="col-auto">
+            <input
+              type="number"
+              id="inputNumero"
+              placeholder="Adivina el numero aquí"
+              min="1"
+              max="100"
+              required
+            />
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-outline-primary">
+              Adivinar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
     <script src="../js/pagina01.js"></script>
   </body>
 </html>

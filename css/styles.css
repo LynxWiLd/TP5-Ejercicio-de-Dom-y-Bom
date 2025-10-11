@@ -1,0 +1,15 @@
+.pantalla {
+  border: solid 5px black;
+  background: blue;
+  height: 500px;
+  width: 500px;
+}
+.cuadrado {
+  height: 30px;
+}
+
+#inputNumero {
+  min-width: 250px; /* evita que se achique demasiado */
+  width: 100%; /* se adapta si hay espacio */
+  box-sizing: border-box; /* mantiene padding dentro del ancho */
+}
