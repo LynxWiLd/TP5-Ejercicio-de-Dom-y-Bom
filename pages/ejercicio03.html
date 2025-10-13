@@ -8,13 +8,29 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <title>EJERCICIO03</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="navbar bg-dark text-white p-3">
       <div class="container d-flex justify-content-between align-items-center">
         <h1>Ejercicio 03</h1>
         <a href="../index.html" class="btn btn-primary">Volver</a>
       </div>
     </header>
+    <main class="flex-grow-1 container my-4">
+      <h2>Crea una lista de tus tareas</h2>
+      <div>
+        <form class="">
+          <div class="mb-3">
+            <label for="tarea" class="form-label">Nueva tarea:</label>
+            <input type="text" class="form-control" id="nuevaTarea" required />
+          </div>
+          <button type="submit" id="btnCrear" class="btn btn-primary mb-3">
+            Agregar tarea
+          </button>
+          <h4>📋Tus tareas:</h4>
+          <div id="lista"></div>
+        </form>
+      </div>
+    </main>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/pagina03.js"></script>
   </body>
