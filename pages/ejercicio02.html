@@ -1,20 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Facundo Vera" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <title>EJERCICIO02</title>
-</head>
-<body>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
     <header class="navbar bg-dark text-white p-3">
       <div class="container d-flex justify-content-between align-items-center">
         <h1>Ejercicio 02</h1>
         <a href="../index.html" class="btn btn-primary">Volver</a>
       </div>
     </header>
+    <main class="flex-grow-1 container my-4">
+      <!-- CREAR PERSONAS -->
+      <div class="accordion" id="acordeonCreacion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button btn btn-primary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Crea una persona
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#acordeonCreacion"
+          >
+            <div class="accordion-body">
+              <form id="personaForm" class="mb-4">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="edad" class="form-label">Edad:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="edad"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="dni" class="form-label">DNI:</label>
+                  <input type="number" class="form-control" id="dni" required />
+                </div>
+                <div class="mb-3">
+                  <label for="sexo" class="form-label">Sexo:</label>
+                  <select class="form-select" id="sexo" required>
+                    <option value="H">Hombre</option>
+                    <option value="M">Mujer</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="peso" class="form-label">Peso (kg):</label>
+                  <input
+                    type="number"
+                    step="0.1"
+                    class="form-control"
+                    id="peso"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="altura" class="form-label">Altura (m):</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    class="form-control"
+                    id="altura"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="anioNacimiento" class="form-label"
+                    >Año de Nacimiento:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="anioNacimiento"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnCrear">
+                  Crear Persona
+                </button>
+              </form>
+
+              <div id="resultados" class="mt-4">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- OPCIONES -->
+      <div>
+        <ul class="list-unstyled border rounded shadow mt-4">
+          <li class="p-3 btn bg-light">
+            <button id="generacion"><strong>Mostrar Generación</strong></button>
+            Muestra la generación a la que pertenece la persona junto con su
+            rasgo característico.
+          </li>
+          <li class="p-3 btn bg-light">
+            <button id="mayoMen"><strong>Es Mayor de Edad</strong></button>
+            Indica si la persona es mayor de edad.
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <form></form>
+      </div>
+    </main>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/pagina02.js"></script>
-</body>
+  </body>
 </html>
